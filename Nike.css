@@ -1,0 +1,753 @@
+#nav {
+  border: 2px solid whitesmoke;
+  display: flex;
+}
+
+.men {
+  font-size: 20px;
+  padding-top: 15px;
+  margin-left: 40%;
+  height: 20px;
+  color: black;
+}
+
+.women {
+  font-size: 20px;
+  padding-top: 15px;
+  margin-left: 2%;
+  height: 20px;
+  color: black;
+}
+
+.kid {
+  font-size: 20px;
+  padding-top: 15px;
+  margin-left: 2%;
+  height: 20px;
+  color: black;
+}
+
+.cate {
+  font-size: 20px;
+  padding-top: 15px;
+  margin-left: 2%;
+  height: 20px;
+  color: black;
+}
+.m {
+  color: black;
+}
+
+.m:hover {
+  color: orange;
+}
+.search {
+  font-size: 20px;
+  padding-top: 15px;
+  margin-left: 15%;
+  height: 20px;
+} 
+
+input {
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+input:hover {
+  width: 110px;
+  height: 25px;
+  text-align: center;
+  border-style: outset;
+}
+.logo > img {
+  align-items: flex-start;
+  width: 70px;
+  height: 50px;
+  margin-top: 1px;
+  mix-blend-mode: darken;
+}
+
+#dispuser
+{
+  margin-left:2%;
+  width: 65px;
+  height:20px;
+  margin-top:1.5%;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  font-weight: bolder;
+   border: none;
+  outline: none;
+   position: relative;
+    z-index: 0;
+  border-radius: 10px;
+ 
+}
+#dispuser:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+#dispuser:active {
+  color: white;
+}
+
+#dispuser:active:after {
+  background: transparent;
+}
+
+#dispuser:hover:before {
+  opacity: 1;
+}
+
+#dispuser:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.men:hover {
+  color: blue;
+}
+
+.women:hover {
+  color: blue;
+}
+
+.kid:hover {
+  color: blue;
+}
+
+.cate:hover {
+  color: blue;
+}
+
+.mainimg {
+  width: 90%;
+  height: 550px;
+  margin-left: 5%;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* .mainimg > img:hover {
+  border-radius: 30px;
+  filter: blur(5px);  
+  box-shadow: 20px 10px 50px black;
+} */
+
+.mainimg {
+  box-shadow: 20px 10px 50px black;
+  border-radius: 30px;
+}
+.mainimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all linear 0.8s;
+  box-shadow: 20px 10px 50px black;
+  border-radius: 30px;
+}
+
+.hoveri {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  box-shadow: 20px 10px 50px black;
+  border-radius: 30px;
+}
+
+.mainimg:hover img {
+  opacity: 0;
+}
+
+.mainimg:hover .hoveri {
+  opacity: 1;
+  box-shadow: 20px 10px 50px black;
+  border-radius: 30px;
+}
+.hwrap {
+  width: 41%;
+  margin-left: 30%;
+  margin-top: 0%;
+}
+
+.hslide {
+  text-align: center;
+}
+/* (A) FORCE ALL SLIDES INTO SINGLE ROW */
+.hmove {
+  display: flex;
+}
+.hslide {
+  width: 99%;
+  flex-shrink: 0;
+}
+.hwrap {
+  overflow: hidden;
+}
+
+/* (B) SHIFT SLIDES WITH CSS ANIMATION */
+/* (B1) SLIDES POSITION */
+.hmove {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+@keyframes slideh {
+  0% {
+    right: 0;
+  }
+  32% {
+    right: 0;
+  }
+  33% {
+    right: 100%;
+  }
+  66% {
+    right: 100%;
+  }
+  67% {
+    right: 100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+/* (B2) MOVE SLIDES */
+.hmove {
+  animation: slideh 10s linear infinite;
+}
+.hmove:hover {
+  animation-play-state: paused;
+}
+
+.a {
+  font-size: 75px;
+  width: 60%;
+  margin-left: 27%;
+  margin-top: -30px;
+  height: 100px;
+
+  text-align: start;
+}
+
+.t > pre {
+  font-size: 75px;
+  width: 60%;
+  margin-left: 23%;
+  margin-top: -90px;
+  height: 100px;
+}
+#middle {
+  text-align: center;
+}
+
+.a:hover {
+  background: linear-gradient(90deg, red, blue);
+  color: transparent;
+  background-clip: text;
+}
+
+.t:hover {
+  background: linear-gradient(90deg, red, blue);
+  color: transparent;
+  background-clip: text;
+}
+
+p {
+  margin-top: -7%;
+  font-size: 25px;
+  text-align: center;
+}
+
+#New {
+  width: 20%;
+  height: 50%;
+  font-size: 18px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+#Air {
+  width: 20%;
+  height: 50%;
+  font-size: 18px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.fea {
+  margin-left: 5%;
+}
+
+#botimg {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: space-evenly;
+}
+.imgbt > img {
+  width: 100%;
+  height: 95%;
+}
+
+#botimg1 {
+  display: flex;
+  width: 90%;
+  height: 500px;
+  margin-left: 5%;
+}
+.imgbt1 > img {
+  width: 130%;
+  height: 110%;
+  object-fit: cover;
+  margin-left: 5%;
+}
+
+.imgbt1:nth-child(2) {
+  margin-left: 15%;
+}
+#mid {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#mid > p {
+  margin-top: -6%;
+  font-size: medium;
+}
+
+#iconic {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.ico {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-left: 1%;
+}
+
+.ico > img {
+  width: 250px;
+  height: 250px;
+  gap: 30px;
+  object-fit: cover;
+  transition: all linear 2s;
+}
+
+.ico1 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.ico:hover img {
+  opacity: 0;
+}
+
+.ico:hover .ico1 {
+  opacity: 1;
+}
+#video {
+  width: 70%;
+  height: 450px;
+}
+
+.vid {
+  width: 70%;
+  height: 100%;
+}
+#vmid {
+  margin-top: 25%;
+}
+
+#vmid > h2 {
+  text-align: center;
+}
+
+#VNew {
+  margin-left: 45%;
+  background-color: black;
+  color: whitesmoke;
+  width: 10%;
+  height: 2%;
+  font-size: large;
+}
+
+input:hover {
+  text-transform: uppercase;
+}
+#Sport {
+  display: flex;
+  overflow: auto;
+  width: 90%;
+  white-space: nowrap;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.bysp {
+  margin-left: 2%;
+}
+.bysp > img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.bysp > h4 {
+  margin-top: -5%;
+}
+
+.bysp > input {
+  margin-top: -5%;
+}
+
+#mem {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  object-fit: cover;
+}
+
+.memB {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.memB > img {
+  width: 450px;
+  height: 450px;
+  margin-right: 1%;
+  object-fit: cover;
+}
+
+/* #list {
+  margin-top: 5%;
+}
+
+#list > table {
+  margin-left: 30%;
+  text-align: start;
+}
+
+#footer {
+  background-color: black;
+  margin-top: 2%;
+}
+
+#footer > table {
+  color: white;
+  margin-left: 15%;
+} */
+
+#fot {
+  margin-top: 5%;
+  width: 80%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 10%;
+}
+
+.div1 {
+  margin-top: 4%;
+  width: 100%;
+  height: 300px;
+  line-height: 1.4;
+}
+
+.div2 {
+  margin-top: 4%;
+  width: 100%;
+  height: 300px;
+  line-height: 1.4;
+}
+
+.div3 {
+  margin-top: 4%;
+  width: 100%;
+  height: 300px;
+  line-height: 1.4;
+}
+.div4 {
+  margin-top: 4%;
+  width: 100%;
+  height: 300px;
+  line-height: 1.4;
+}
+
+.div1 > p {
+  font-size: 20px;
+  text-align: start;
+  margin-left: 10%;
+}
+
+.div2 > p {
+  font-size: 20px;
+  text-align: start;
+}
+
+.div3 > p {
+  font-size: 20px;
+  text-align: start;
+}
+
+.div4 > p {
+  font-size: 20px;
+  text-align: start;
+}
+
+#footer {
+  display: flex;
+  margin-top: 5%;
+  background-color: black;
+}
+
+.foot1 {
+  margin-left: 2%;
+  color: whitesmoke;
+  margin-top: 2%;
+}
+
+.foot2 {
+  margin-left: 5%;
+  color: whitesmoke;
+  margin-top: 2%;
+}
+
+.foot3 {
+  margin-left: 5%;
+  color: whitesmoke;
+  margin-top: 2%;
+}
+
+.foot1 > p {
+  text-align: start;
+  margin-top: 2%;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.foot2 > p {
+  text-align: start;
+  margin-top: 2%;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.foot3 > p {
+  text-align: start;
+  margin-top: 2%;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+#last {
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.l1 {
+  margin-left: 33%;
+  color: gray;
+  margin-top: 3%;
+  height: fit-content;
+}
+
+.l2 {
+  margin-left: 1%;
+  color: gray;
+  margin-top: 3%;
+  height: fit-content;
+}
+.l3 {
+  margin-left: 1%;
+  color: gray;
+  margin-top: 3%;
+  height: fit-content;
+}
+.l4 {
+  margin-left: 1%;
+  color: gray;
+  margin-top: 1.5%;
+  height: fit-content;
+}
+
+.l4 > a {
+  color: grey;
+}
+
+#last > h4 {
+  text-align: center;
+  margin-top: 3.5%;
+  margin-left: 1%;
+  color: gray;
+}
+
+#last > h3 {
+  margin-left: 1%;
+  margin-top: 3%;
+}
+
+#last > h2 {
+  margin-left: 1%;
+  margin-top: 3%;
+}
+
+.l1:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+
+.l2:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+
+.l3:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+
+.glow-on-hover {
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-top: 3%;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.heart:hover {
+  color: red;
+}
+
+.india:hover {
+  height: fit-content;
+  background: linear-gradient(180deg, #ff9933, white, #138808);
+  color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #6baf8d;
+}
